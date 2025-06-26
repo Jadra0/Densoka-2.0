@@ -34,7 +34,7 @@ body {
     position: absolute;
     width: max-content;
     margin-top: -7rem;
-    margin-left: -100%;
+    transform: translateX(100%);
     font-style: oblique;
 }
 .welcome:nth-of-type(1) {
@@ -53,8 +53,8 @@ body {
     animation-delay: 10s;
 }
 @keyframes loop {
-    0% {margin-right: 100%;}
-    100% {margin-right: calc(-3000px + 100vw);}
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(100%);}
 }
 img {
     margin-bottom: 10rem;
