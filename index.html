@@ -67,3 +67,51 @@ a:hover {
     color: rgb(255, 0, 255);
 }
 </style>
+</script>
+function title_animation() {
+        var index = 0;
+        var direction = true;
+        const main_part = "Densoka - Home"
+        function update() {
+            switch (index) {
+                case 1:
+                    document.title = main_part;
+                    break;
+                case 2:
+                    document.title = main_part+" <";
+                    break;
+                case 3:
+                    document.title = main_part+" <<";
+                    break;
+                case 4:
+                    document.title = main_part+" <<3";
+                    break;
+                case 5:
+                    document.title = main_part+" <<33";
+                    break;
+                case 6:
+                    document.title = main_part+" <<33.";
+                    break;
+                case 7:
+                    document.title = main_part+" <<33..";
+                    break;
+                case 8:
+                    document.title = main_part+" <<33...";
+                    break;
+                case 0:
+                    direction = true;
+                    break;
+                default:
+                    direction = false;
+                    break;
+            }
+            if (direction) {
+                index++;
+            }   else {
+                index--;
+            }
+        }
+        const update_interval = setInterval(update, 465);
+    }
+    title_animation()
+    </script>
