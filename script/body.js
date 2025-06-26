@@ -17,14 +17,11 @@ const b3 = document.createElement("h1");
 b3.innerText="Minecraft server";
 b3.className="sb";
 const b4 = document.createElement("h1");
-b4.innerText="Youtube kanava";
+b4.innerText="Discord server";
 b4.className="sb";
 const b5 = document.createElement("h1");
-b5.innerText="Discord server";
+b5.innerText="Muuta";
 b5.className="sb";
-const b6 = document.createElement("h1");
-b6.innerText="Muuta";
-b6.className="sb";
 document.head.appendChild(style);
 if (window.innerWidth<800) {
     const bannertext = document.createElement("h1");
@@ -48,7 +45,6 @@ if (window.innerWidth<800) {
     selection.appendChild(b3);
     selection.appendChild(b4);
     selection.appendChild(b5);
-    selection.appendChild(b6);
     document.getElementById("exit").onclick = close;
     document.getElementById("open").onclick = open;
     document.onkeyup = function (p) {
@@ -72,7 +68,6 @@ if (window.innerWidth<800) {
     banner.appendChild(b3);
     banner.appendChild(b4);
     banner.appendChild(b5);
-    banner.appendChild(b6);
     var index=0;
     function forEach() {
         if (document.getElementsByClassName("sb")[index]) {
@@ -96,12 +91,9 @@ b3.onclick = function () {
     document.location.href="/minecraft palvelin.html";
 }
 b4.onclick = function () {
-    document.location.href="/youtube.html";
-}
-b5.onclick = function () {
     document.location.href="/discord.html";
 }
-b6.onclick = function () {
+b5.onclick = function () {
     document.location.href="/muuta.html";
 }
 const backgroundImg = document.createElement("img");
