@@ -1,7 +1,7 @@
 var BKCcolor="#90f";
 const body = document.body;
 const logo = document.createElement("img");
-    logo.src = "/gallery/logo.jpg";
+    logo.src = "/gallery/logo.png";
     logo.alt = "Logo";
     logo.className = "logo";
     body.appendChild(logo);
