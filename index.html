@@ -1,80 +1,117 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Koti</title>
-  <meta name="description" content="Tervetuloa Densokaan" />
-  <style>
-    body {
-      overflow-x: hidden;
-      margin: 0;
-      padding: 0;
-    }
-
-    .welcome-container {
-      position: relative;
-      white-space: nowrap;
-      overflow: visible;
-      width: 100vw;
-      height: 3rem;
-      margin-top: 1rem;
-      animation: slideLeft 12s linear infinite;
-    }
-
-    .welcome {
-      display: inline-block;
-      margin-right: 4rem;
-      font-size: 2rem;
-      text-shadow: 1px 1px 2px purple, -1px 1px 2px purple, -1px -1px 2px purple, 1px -1px 2px purple;
-      font-style: oblique;
-      color: purple;
-    }
-
-    @keyframes slideLeft {
-      0% {
-        transform: translateX(100%);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-
-    .o {
-      margin-top: 6rem;
-      font-size: 1.5rem;
-      color: purple;
-    }
-
-    .t {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      max-width: 600px;
-      margin-left: 1rem;
-    }
-
-    a {
-      color: purple;
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: magenta;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koti</title>
+    <meta name="description" content="Tervetuloa Densokaan">
 </head>
-<body>
-  <script src="/script/body.js"></script>
-
-  <div class="welcome-container">
+    <body>
+    <script src="/script/body.js"></script>
     <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
     <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
     <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
     <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-  </div>
-
-  <h1 class="t">Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin vaihtoehdoista.</h1>
-
-  <h1 class="o">Keitä olemme?</h1>
-  <h1 class="t">Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite on bannerissa mainittujen projektien lisäksi tarjota mukava juttelupaikka, joka ei jätä ketään kylmäksi.</h1>
+    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+    <h1 class="t">Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin vaihtoehdoista.</h1>
+    <h1 class="o">Keitä olemme?</h1>
+    <h1 class="t">Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite on bannerissa mainittujen projektien lisäksi tarjota mukava juttelupaikka, joka ei jätä ketään kylmäksi.</h1>
+    <h1 class="o">Densokan arvot</h1>
+    <h1 class="t">Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme hyväksy minkäänlaista rasismia tai kiusaamista. Palvelimellamme kaikki ovat tasa-arvoisia eikä ketään syrjitä. Myöskin ylläpito noudattaa tätä periaatetta, eikä palvelimellamme kenelläkään ole erikoissoikeuksia. Kuuuntelemme ja kohtelemme kaikkia jäseniä yksilöinä, emmekä tuomitse ketään.</h1>
+    <h1 class="o">Palaute</h1>
+    <h1 class="t">Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden toteuttaminen. Yritämme luoda parhaan mahdollisen kokemuksen jäsenillemme, jossa voit auttaa meitä vastaamalla <a href="https://docs.google.com/forms/d/e/1FAIpQLScvc1DnoJh1-J2KrVS7mFF1pEz2aACaGQh7fKBaqWJdtST-Xw/viewform?usp=sf_link">Palautekyselyyn</a>.</h1>
+</body>
+</html>
+<style>
+body {
+    overflow-x: hidden;
+}
+.welcome {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px purple, -1px 1px 2px purple, -1px -1px 2px purple, 1px -1px 2px purple;
+    animation: 12s infinite linear loop;
+    position: absolute;
+    width: max-content;
+    top: 0;
+    transform: translateX(-100%);
+    font-style: oblique;
+}
+.welcome:nth-of-type(1) {
+    animation-delay: 0s;
+}
+.welcome:nth-of-type(2) {
+    animation-delay: 2.5s;
+}
+.welcome:nth-of-type(3) {
+    animation-delay: 5s;
+}
+.welcome:nth-of-type(4) {
+    animation-delay: 7.5s;
+}
+.welcome:nth-of-type(5) {
+    animation-delay: 10s;
+}
+@keyframes loop {
+    0% {transform: translateX(100%);}
+    -100% {transform: translateX(-100%);}
+}
+img {
+    margin-top: -10rem;
+}
+a {
+    text-align: center;
+    color: purple;
+}
+a:hover {
+    color: rgb(255, 0, 255);
+}
+</style>
+<script>
+function title_animation() {
+        var index = 0;
+        var direction = true;
+        const main_part = "Densoka - Home"
+        function update() {
+            switch (index) {
+                case 1:
+                    document.title = main_part;
+                    break;
+                case 2:
+                    document.title = main_part+" <";
+                    break;
+                case 3:
+                    document.title = main_part+" <<";
+                    break;
+                case 4:
+                    document.title = main_part+" <<3";
+                    break;
+                case 5:
+                    document.title = main_part+" <<33";
+                    break;
+                case 6:
+                    document.title = main_part+" <<33.";
+                    break;
+                case 7:
+                    document.title = main_part+" <<33..";
+                    break;
+                case 8:
+                    document.title = main_part+" <<33...";
+                    break;
+                case 0:
+                    direction = true;
+                    break;
+                default:
+                    direction = false;
+                    break;
+            }
+            if (direction) {
+                index++;
+            }   else {
+                index--;
+            }
+        }
+        const update_interval = setInterval(update, 465);
+    }
+    title_animation()
+    </script>
