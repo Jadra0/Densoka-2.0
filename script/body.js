@@ -1,10 +1,5 @@
 var BKCcolor="#90f";
 const body = document.body;
-const logo = document.createElement("img");
-    logo.src = "/gallery/logo.png";
-    logo.alt = "Logo";
-    logo.className = "logo";
-    body.appendChild(logo);
 const banner = document.createElement("div");
 banner.id="Banner";
 body.appendChild(banner);
