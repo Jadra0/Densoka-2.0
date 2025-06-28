@@ -69,6 +69,11 @@ body {
     0% {}
     50% {margin-bottom: 0.5vh;}
     100% {}
+ }
+.navigation-bar section {
+    padding: 0 5px 0 5px;
+    display: inline;
+    padding: 0;
 }
 #Banner {
     width: 100%;
