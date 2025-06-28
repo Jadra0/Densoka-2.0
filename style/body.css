@@ -70,11 +70,6 @@ body {
     50% {margin-bottom: 0.5vh;}
     100% {}
  }
-logo section {
-    padding: 0 5px 0 5px;
-    display: inline;
-    padding: 0;
-}
 #Banner {
     width: 100%;
     position: absolute;
