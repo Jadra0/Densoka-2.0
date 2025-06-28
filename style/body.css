@@ -78,6 +78,7 @@ body {
     background-color: #2f0042;
     height: 10vh;
     height: auto;
+    z-index: 9;
 }
 #bannerText {
     text-align: center;
