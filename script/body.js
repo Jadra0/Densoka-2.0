@@ -70,15 +70,14 @@ if (window.innerWidth<800) {
     banner.appendChild(b5);
     var index=0;
     function forEach() {
-        if (document.getElementsByClassName("sb")[index]) {
-            document.getElementsByClassName("sb")[index].style="display: inline-table; margin-top: 4vh;";
-            if (index !== 0) {
-                document.getElementsByClassName("sb")[index].style.borderLeft="2px solid white";
-            }
-            index++;
-            forEach();
-        }
+    const elements = document.getElementsByClassName("sb");
+    if (index < elements.length) {
+        elements[index].style.display = "inline-table";
+        elements[index].style.marginTop = "4vh";
+        index++;
+        forEach();
     }
+}
     forEach();
 }
 b1.onclick = function () {

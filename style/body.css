@@ -44,9 +44,8 @@ body {
 .sb {
     color: white;
     font-size: 20px;
-    margin-left: 2vh;
-    margin-bottom: 2px;
-    line-height: 15px;
+    margin-left: 1vh;
+    line-height: 0px;
     padding-left: 20px;
 }
 .sb:hover {
@@ -76,16 +75,9 @@ body {
     left: 0;
     top: 0;
     background-color: #2f0042;
-    height: 10vh;
+    height: 10h;
     height: auto;
-    z-index: 9;
-}
-#bannerText {
-    text-align: center;
-    margin-top: 5.5vh;
-    color: rgb(255, 255, 255);
-    font-size: 45px;
-    font-family: monospace;
+    z-index: 1;
 }
 #cop {
     margin-top: 20vh;
