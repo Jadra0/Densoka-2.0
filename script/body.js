@@ -106,7 +106,7 @@ document.body.onload = function () {
 const icon = document.createElement("link");
 icon.type="image/icon";
 icon.rel="icon";
-icon.href="/gallery/Logo.png";
+icon.href="/gallery/favicon.icon";
 document.head.appendChild(icon);
 const cop = document.createElement("div");
 cop.id="cop";
