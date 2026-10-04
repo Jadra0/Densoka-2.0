@@ -9,7 +9,16 @@
     <meta name="description" content="Tervetuloa Densokaan">
 
     <style>
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
             overflow-x: hidden;
         }
 
@@ -19,6 +28,19 @@
             max-width: 100%;
             width: 5vh;
             margin-top: 10px;
+        }
+
+        /*
+        ==========================================
+        WELCOME ANIMATION CONTAINER
+        ==========================================
+        */
+
+        .welcome-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
         }
 
         .welcome {
@@ -39,31 +61,30 @@
             margin-left: -100%;
 
             font-style: oblique;
+
+            white-space: nowrap;
         }
 
-        .welcome:nth-of-type(1) {
+        .welcome:nth-child(1) {
             animation-delay: 0s;
         }
 
-        .welcome:nth-of-type(2) {
+        .welcome:nth-child(2) {
             animation-delay: 2.5s;
         }
 
-        .welcome:nth-of-type(3) {
+        .welcome:nth-child(3) {
             animation-delay: 5s;
         }
 
-        .welcome:nth-of-type(4) {
+        .welcome:nth-child(4) {
             animation-delay: 7.5s;
         }
 
-        .welcome:nth-of-type(5) {
+        .welcome:nth-child(5) {
             animation-delay: 10s;
         }
 
-        /*
-         * ORIGINAL DESKTOP ANIMATION
-         */
         @keyframes loop {
             0% {
                 margin-left: 100%;
@@ -89,22 +110,66 @@
 
 
         /*
-         * ==========================================
-         * MOBILE ONLY
-         * ==========================================
-         *
-         * Desktop is left completely alone.
-         */
+        ==========================================
+        MOBILE
+        ==========================================
+        */
 
         @media screen and (max-width: 600px) {
 
+            /*
+            Prevent mobile browsers from creating
+            horizontal page width from the animation.
+            */
+
+            html,
+            body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            /*
+            Keep the animation inside the viewport.
+            */
+
+            .welcome-container {
+                width: 100vw;
+                max-width: 100vw;
+                height: 45px;
+
+                overflow: hidden;
+
+                position: relative;
+            }
+
             .welcome {
+                font-size: 1.5rem;
+
+                /*
+                Don't let the text itself determine
+                the width of the page.
+                */
+
+                width: max-content;
+                max-width: none;
+
+                position: absolute;
+
+                /*
+                Use transform instead of creating
+                a giant horizontal layout.
+                */
+
                 margin-left: 0;
+
                 left: 100%;
+
                 animation-name: mobile-loop;
             }
 
             @keyframes mobile-loop {
+
                 0% {
                     left: 100%;
                     transform: translateX(0);
@@ -116,22 +181,40 @@
                 }
             }
         }
+
     </style>
 </head>
 
 <body>
 
     <div class="logo1">
-
         <section>
-
-            <img
-                src="/gallery/logo.png"
-                alt="Logo"
-                class="logo1"
-            >
-
+            <img src="/gallery/logo.png" alt="Logo" class="logo1">
         </section>
+    </div>
+
+
+    <div class="welcome-container">
+
+        <h1 class="welcome">
+            Tervetuloa Densokan Kotisivuille
+        </h1>
+
+        <h1 class="welcome">
+            Tervetuloa Densokan Kotisivuille
+        </h1>
+
+        <h1 class="welcome">
+            Tervetuloa Densokan Kotisivuille
+        </h1>
+
+        <h1 class="welcome">
+            Tervetuloa Densokan Kotisivuille
+        </h1>
+
+        <h1 class="welcome">
+            Tervetuloa Densokan Kotisivuille
+        </h1>
 
     </div>
 
@@ -139,75 +222,39 @@
     <script src="/script/body.js"></script>
 
 
-    <!-- WELCOME ANIMATION -->
-
-    <h1 class="welcome">
-        Tervetuloa Densokan Kotisivuille
-    </h1>
-
-    <h1 class="welcome">
-        Tervetuloa Densokan Kotisivuille
-    </h1>
-
-    <h1 class="welcome">
-        Tervetuloa Densokan Kotisivuille
-    </h1>
-
-    <h1 class="welcome">
-        Tervetuloa Densokan Kotisivuille
-    </h1>
-
-    <h1 class="welcome">
-        Tervetuloa Densokan Kotisivuille
-    </h1>
-
-
-    <!-- MAIN CONTENT -->
-
     <h1 class="t">
-        Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta
-        ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin
-        vaihtoehdoista.
+        Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta ja sen projekteista.
+        Voit lukea lisää projekteistamme yläpalkin vaihtoehdoista.
     </h1>
-
 
     <h1 class="o">
         Keitä olemme?
     </h1>
 
-
     <h1 class="t">
-        Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo
-        ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite
-        on bannerissa mainittujen projektien lisäksi tarjota mukava
-        juttelupaikka, joka ei jätä ketään kylmäksi.
+        Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo ensimmäisen vuotensa aikana saanut yli 200 jäsentä.
+        Densokan tavoite on bannerissa mainittujen projektien lisäksi tarjota mukava juttelupaikka,
+        joka ei jätä ketään kylmäksi.
     </h1>
-
 
     <h1 class="o">
         Densokan arvot
     </h1>
 
-
     <h1 class="t">
-        Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme
-        hyväksy minkäänlaista rasismia tai kiusaamista. Palvelimellamme kaikki
-        ovat tasa-arvoisia eikä ketään syrjitä. Myöskin ylläpito noudattaa tätä
-        periaatetta, eikä palvelimellamme kenelläkään ole erikoissoikeuksia.
+        Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme hyväksy minkäänlaista
+        rasismia tai kiusaamista. Palvelimellamme kaikki ovat tasa-arvoisia eikä ketään syrjitä.
+        Myöskin ylläpito noudattaa tätä periaatetta, eikä palvelimellamme kenelläkään ole erikoissoikeuksia.
         Kuuuntelemme ja kohtelemme kaikkia jäseniä yksilöinä, emmekä tuomitse ketään.
     </h1>
-
 
     <h1 class="o">
         Palaute
     </h1>
 
-
     <h1 class="t">
-        Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden
-        toteuttaminen. Yritämme luoda parhaan mahdollisen kokemuksen
-        jäsenillemme, jossa voit auttaa meitä vastaamalla
-
+        Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden toteuttaminen.
+        Yritämme luoda parhaan mahdollisen kokemuksen jäsenillemme, jossa voit auttaa meitä vastaamalla
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScvc1DnoJh1-J2KrVS7mFF1pEz2aACaGQh7fKBaqWJdtST-Xw/viewform?usp=sf_link">
             Palautekyselyyn
         </a>.
@@ -277,7 +324,6 @@
 
             const update_interval = setInterval(update, 465);
         }
-
 
         title_animation();
 
