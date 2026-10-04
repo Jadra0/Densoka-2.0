@@ -4,129 +4,287 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koti</title>
+
+    <title>Densoka - Home</title>
     <meta name="description" content="Tervetuloa Densokaan">
-</head>
-    <body>
-    <div class="logo1">
-    <section>
-    <img src="/gallery/logo.png" alt="Logo" class="logo1">
-    </section>
-    </div>
-    <script src="/script/body.js"></script>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="t">Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin vaihtoehdoista.</h1>
-    <h1 class="o">Keitä olemme?</h1>
-    <h1 class="t">Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite on bannerissa mainittujen projektien lisäksi tarjota mukava juttelupaikka, joka ei jätä ketään kylmäksi.</h1>
-    <h1 class="o">Densokan arvot</h1>
-    <h1 class="t">Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme hyväksy minkäänlaista rasismia tai kiusaamista. Palvelimellamme kaikki ovat tasa-arvoisia eikä ketään syrjitä. Myöskin ylläpito noudattaa tätä periaatetta, eikä palvelimellamme kenelläkään ole erikoissoikeuksia. Kuuuntelemme ja kohtelemme kaikkia jäseniä yksilöinä, emmekä tuomitse ketään.</h1>
-    <h1 class="o">Palaute</h1>
-    <h1 class="t">Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden toteuttaminen. Yritämme luoda parhaan mahdollisen kokemuksen jäsenillemme, jossa voit auttaa meitä vastaamalla <a href="https://docs.google.com/forms/d/e/1FAIpQLScvc1DnoJh1-J2KrVS7mFF1pEz2aACaGQh7fKBaqWJdtST-Xw/viewform?usp=sf_link">Palautekyselyyn</a>.</h1>
-</body>
-</html>
-<style>
-body {
-    overflow-x: hidden;
-}
-.logo1 {
-    position: relative;
-    z-index: 10;
-    max-width: 100%;
-    width: 5vh;
-    margin-top: 10px;
-     
-}
-.welcome {
-    font-size: 2rem;
-    text-shadow: 1px 1px 2px purple, -1px 1px 2px purple, -1px -1px 2px purple, 1px -1px 2px purple;
-    animation: infinite linear loop;
-    position: absolute;
-    width: max-content;
-    max-height: 100%;
-    margin-top: -7rem;
-    margin-left: -100%;
-    font-style: oblique;
-}
-.welcome:nth-of-type(1) {
-    animation-delay: 0s;
-}
-.welcome:nth-of-type(2) {
-    animation-delay: 2.5s;
-}
-.welcome:nth-of-type(3) {
-    animation-delay: 5s;
-}
-.welcome:nth-of-type(4) {
-    animation-delay: 7.5s;
-}
-.welcome:nth-of-type(5) {
-    animation-delay: 10s;
-}
-@keyframes loop {
-    0% {margin-left: 100%;}
-    100% {margin-left: calc(-3000px + 100vw);}
-}
-img {
-    margin-bottom: 10rem;
-}
-a {
-    text-align: center;
-    color: purple;
-}
-a:hover {
-    color: rgb(255, 0, 255);
-}
-</style>
-<script>
-function title_animation() {
-        var index = 0;
-        var direction = true;
-        const main_part = "Densoka - Home"
-        function update() {
-            switch (index) {
-                case 1:
-                    document.title = main_part;
-                    break;
-                case 2:
-                    document.title = main_part+" <";
-                    break;
-                case 3:
-                    document.title = main_part+" <<";
-                    break;
-                case 4:
-                    document.title = main_part+" <<3";
-                    break;
-                case 5:
-                    document.title = main_part+" <<33";
-                    break;
-                case 6:
-                    document.title = main_part+" <<33.";
-                    break;
-                case 7:
-                    document.title = main_part+" <<33..";
-                    break;
-                case 8:
-                    document.title = main_part+" <<33...";
-                    break;
-                case 0:
-                    direction = true;
-                    break;
-                default:
-                    direction = false;
-                    break;
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: #fff;
+        }
+
+        .logo-container {
+            width: 100%;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            position: relative;
+            z-index: 10;
+            width: 70px;
+            max-width: 20vw;
+            height: auto;
+            display: block;
+        }
+
+        .welcome-container {
+            position: relative;
+            width: 100%;
+            height: 60px;
+            overflow: hidden;
+            margin-top: 20px;
+            margin-bottom: 60px;
+        }
+
+        .welcome {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            white-space: nowrap;
+            text-shadow:
+                1px 1px 2px purple,
+                -1px 1px 2px purple,
+                -1px -1px 2px purple,
+                1px -1px 2px purple;
+
+            animation: loop 12s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: max-content;
+            margin: 0;
+            font-style: oblique;
+        }
+
+        .welcome:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .welcome:nth-child(2) {
+            animation-delay: 2.5s;
+        }
+
+        .welcome:nth-child(3) {
+            animation-delay: 5s;
+        }
+
+        .welcome:nth-child(4) {
+            animation-delay: 7.5s;
+        }
+
+        .welcome:nth-child(5) {
+            animation-delay: 10s;
+        }
+
+        @keyframes loop {
+            0% {
+                transform: translateX(100vw);
             }
-            if (direction) {
-                index++;
-            }   else {
-                index--;
+
+            100% {
+                transform: translateX(-100%);
             }
         }
-        const update_interval = setInterval(update, 465);
-    }
-    title_animation()
+
+        .content {
+            width: min(100% - 40px, 1000px);
+            margin: 0 auto;
+        }
+
+        .t {
+            font-size: clamp(1rem, 2vw, 1.35rem);
+            line-height: 1.6;
+            font-weight: normal;
+            margin: 0 0 35px;
+        }
+
+        .o {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin: 0 0 15px;
+        }
+
+        a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(255, 0, 255);
+        }
+
+        /* Puhelimet */
+        @media (max-width: 600px) {
+
+            .logo-container {
+                padding: 10px 15px;
+            }
+
+            .logo {
+                width: 55px;
+                max-width: none;
+            }
+
+            .welcome-container {
+                height: 45px;
+                margin-top: 10px;
+                margin-bottom: 45px;
+            }
+
+            .welcome {
+                font-size: 1.2rem;
+            }
+
+            .content {
+                width: calc(100% - 30px);
+            }
+
+            .t {
+                font-size: 1rem;
+                line-height: 1.55;
+                margin-bottom: 30px;
+            }
+
+            .o {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo-container">
+        <img src="/gallery/logo.png" alt="Densoka logo" class="logo">
+    </div>
+
+    <div class="welcome-container">
+
+        <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+        <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+        <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+        <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+        <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
+
+    </div>
+
+    <main class="content">
+
+        <h2 class="t">
+            Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta
+            ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin
+            vaihtoehdoista.
+        </h2>
+
+        <h2 class="o">Keitä olemme?</h2>
+
+        <p class="t">
+            Densoka on vuonna 2022 perustettu Discord-palvelin, joka on jo
+            ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite
+            on bannerissa mainittujen projektien lisäksi tarjota mukava
+            juttelupaikka, joka ei jätä ketään kylmäksi.
+        </p>
+
+        <h2 class="o">Densokan arvot</h2>
+
+        <p class="t">
+            Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme
+            hyväksy minkäänlaista rasismia tai kiusaamista. Palvelimellamme
+            kaikki ovat tasa-arvoisia eikä ketään syrjitä. Myöskin ylläpito
+            noudattaa tätä periaatetta, eikä palvelimellamme kenelläkään ole
+            erikoisoikeuksia. Kuuntelemme ja kohtelemme kaikkia jäseniä
+            yksilöinä, emmekä tuomitse ketään.
+        </p>
+
+        <h2 class="o">Palaute</h2>
+
+        <p class="t">
+            Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden
+            toteuttaminen. Yritämme luoda parhaan mahdollisen kokemuksen
+            jäsenillemme, jossa voit auttaa meitä vastaamalla
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScvc1DnoJh1-J2KrVS7mFF1pEz2aACaGQh7fKBaqWJdtST-Xw/viewform?usp=sf_link">
+                palautekyselyyn
+            </a>.
+        </p>
+
+    </main>
+
+    <script src="/script/body.js"></script>
+
+    <script>
+        function title_animation() {
+            let index = 0;
+            let direction = true;
+
+            const main_part = "Densoka - Home";
+
+            function update() {
+
+                switch (index) {
+                    case 1:
+                        document.title = main_part;
+                        break;
+
+                    case 2:
+                        document.title = main_part + " <";
+                        break;
+
+                    case 3:
+                        document.title = main_part + " <<";
+                        break;
+
+                    case 4:
+                        document.title = main_part + " <<3";
+                        break;
+
+                    case 5:
+                        document.title = main_part + " <<33";
+                        break;
+
+                    case 6:
+                        document.title = main_part + " <<33.";
+                        break;
+
+                    case 7:
+                        document.title = main_part + " <<33..";
+                        break;
+
+                    case 8:
+                        document.title = main_part + " <<33...";
+                        break;
+
+                    case 0:
+                        direction = true;
+                        break;
+
+                    default:
+                        direction = false;
+                        break;
+                }
+
+                if (direction) {
+                    index++;
+                } else {
+                    index--;
+                }
+            }
+
+            setInterval(update, 465);
+        }
+
+        title_animation();
     </script>
+
+</body>
+</html>
 
