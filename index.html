@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Koti</title>
     <meta name="description" content="Tervetuloa Densokaan">
 
@@ -22,15 +23,21 @@
 
         .welcome {
             font-size: 2rem;
-            text-shadow: 1px 1px 2px purple, -1px 1px 2px purple, -1px -1px 2px purple, 1px -1px 2px purple;
+            text-shadow:
+                1px 1px 2px purple,
+                -1px 1px 2px purple,
+                -1px -1px 2px purple,
+                1px -1px 2px purple;
+
             animation: 12s infinite linear loop;
+
             position: absolute;
             width: max-content;
-            max-width: none;
             max-height: 100%;
+
             margin-top: -7rem;
-            margin-left: 0;
-            left: 0;
+            margin-left: -100%;
+
             font-style: oblique;
         }
 
@@ -54,13 +61,16 @@
             animation-delay: 10s;
         }
 
+        /*
+         * ORIGINAL DESKTOP ANIMATION
+         */
         @keyframes loop {
             0% {
-                transform: translateX(100vw);
+                margin-left: 100%;
             }
 
             100% {
-                transform: translateX(-100%);
+                margin-left: calc(-3000px + 100vw);
             }
         }
 
@@ -77,10 +87,33 @@
             color: rgb(255, 0, 255);
         }
 
-        /* Mobile fix */
-        @media (max-width: 600px) {
+
+        /*
+         * ==========================================
+         * MOBILE ONLY
+         * ==========================================
+         *
+         * Desktop is left completely alone.
+         */
+
+        @media screen and (max-width: 600px) {
+
             .welcome {
-                font-size: 1.5rem;
+                margin-left: 0;
+                left: 100%;
+                animation-name: mobile-loop;
+            }
+
+            @keyframes mobile-loop {
+                0% {
+                    left: 100%;
+                    transform: translateX(0);
+                }
+
+                100% {
+                    left: 0;
+                    transform: translateX(-100%);
+                }
             }
         }
     </style>
@@ -89,60 +122,111 @@
 <body>
 
     <div class="logo1">
+
         <section>
-            <img src="/gallery/logo.png" alt="Logo" class="logo1">
+
+            <img
+                src="/gallery/logo.png"
+                alt="Logo"
+                class="logo1"
+            >
+
         </section>
+
     </div>
+
 
     <script src="/script/body.js"></script>
 
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
-    <h1 class="welcome">Tervetuloa Densokan Kotisivuille</h1>
 
-    <h1 class="t">
-        Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta ja sen projekteista.
-        Voit lukea lisää projekteistamme yläpalkin vaihtoehdoista.
+    <!-- WELCOME ANIMATION -->
+
+    <h1 class="welcome">
+        Tervetuloa Densokan Kotisivuille
     </h1>
 
-    <h1 class="o">Keitä olemme?</h1>
-
-    <h1 class="t">
-        Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo ensimmäisen vuotensa
-        aikana saanut yli 200 jäsentä. Densokan tavoite on bannerissa mainittujen projektien
-        lisäksi tarjota mukava juttelupaikka, joka ei jätä ketään kylmäksi.
+    <h1 class="welcome">
+        Tervetuloa Densokan Kotisivuille
     </h1>
 
-    <h1 class="o">Densokan arvot</h1>
-
-    <h1 class="t">
-        Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme hyväksy minkäänlaista
-        rasismia tai kiusaamista. Palvelimellamme kaikki ovat tasa-arvoisia eikä ketään syrjitä.
-        Myöskin ylläpito noudattaa tätä periaatetta, eikä palvelimellamme kenelläkään ole
-        erikoissoikeuksia. Kuuuntelemme ja kohtelemme kaikkia jäseniä yksilöinä, emmekä tuomitse ketään.
+    <h1 class="welcome">
+        Tervetuloa Densokan Kotisivuille
     </h1>
 
-    <h1 class="o">Palaute</h1>
+    <h1 class="welcome">
+        Tervetuloa Densokan Kotisivuille
+    </h1>
+
+    <h1 class="welcome">
+        Tervetuloa Densokan Kotisivuille
+    </h1>
+
+
+    <!-- MAIN CONTENT -->
 
     <h1 class="t">
-        Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden toteuttaminen.
-        Yritämme luoda parhaan mahdollisen kokemuksen jäsenillemme, jossa voit auttaa meitä
-        vastaamalla
+        Tervetuloa Densokan kotisivuille. Täältä saat tietää Densokasta
+        ja sen projekteista. Voit lukea lisää projekteistamme yläpalkin
+        vaihtoehdoista.
+    </h1>
+
+
+    <h1 class="o">
+        Keitä olemme?
+    </h1>
+
+
+    <h1 class="t">
+        Densoka on vuonna 2022 perustettu Discord palvelin, joka on jo
+        ensimmäisen vuotensa aikana saanut yli 200 jäsentä. Densokan tavoite
+        on bannerissa mainittujen projektien lisäksi tarjota mukava
+        juttelupaikka, joka ei jätä ketään kylmäksi.
+    </h1>
+
+
+    <h1 class="o">
+        Densokan arvot
+    </h1>
+
+
+    <h1 class="t">
+        Haluamme ylläpitää palvelimella hyvää ilmapiiriä, jonka takia emme
+        hyväksy minkäänlaista rasismia tai kiusaamista. Palvelimellamme kaikki
+        ovat tasa-arvoisia eikä ketään syrjitä. Myöskin ylläpito noudattaa tätä
+        periaatetta, eikä palvelimellamme kenelläkään ole erikoissoikeuksia.
+        Kuuuntelemme ja kohtelemme kaikkia jäseniä yksilöinä, emmekä tuomitse ketään.
+    </h1>
+
+
+    <h1 class="o">
+        Palaute
+    </h1>
+
+
+    <h1 class="t">
+        Meille Densokassa on tärkeää jäsenten kuunteleminen ja ideoiden
+        toteuttaminen. Yritämme luoda parhaan mahdollisen kokemuksen
+        jäsenillemme, jossa voit auttaa meitä vastaamalla
+
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScvc1DnoJh1-J2KrVS7mFF1pEz2aACaGQh7fKBaqWJdtST-Xw/viewform?usp=sf_link">
             Palautekyselyyn
         </a>.
     </h1>
 
+
     <script>
+
         function title_animation() {
+
             var index = 0;
             var direction = true;
+
             const main_part = "Densoka - Home";
 
             function update() {
+
                 switch (index) {
+
                     case 1:
                         document.title = main_part;
                         break;
@@ -194,7 +278,9 @@
             const update_interval = setInterval(update, 465);
         }
 
+
         title_animation();
+
     </script>
 
 </body>
